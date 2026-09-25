@@ -1,6 +1,5 @@
 # Spanwire design system
 
-Designs (Workspaces with the Wire graph, Activity, Dashboard, Settings, Sign in) are on the Superdesign canvas: https://superdesign.dev/teams/75d4f059-8dfb-4e2e-81de-3365fccc988f/projects/87260f68-5013-4a37-8241-2c942e094480
 
 ## Product
 
