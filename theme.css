@@ -1,0 +1,104 @@
+/* Spanwire theme (.superdesign/design-system.md): paper and white surfaces, steel text and actions, and signal
+   amber for messages on the wire, focus and the active item. Status colours each carry one meaning:
+   success = live/delivered, warning = waiting/revoked/expired, destructive = rejected/delete, muted grey = idle. */
+:root {
+  --background: #f2f4f3;
+  --foreground: #16242c;
+  --card: #ffffff;
+  --card-foreground: #16242c;
+  --popover: #ffffff;
+  --popover-foreground: #16242c;
+  --primary: #16242c;
+  --primary-foreground: #ffffff;
+  --primary-hover: #24363f;
+  --primary-soft: #e6ebed;
+  --secondary: #e9edec;
+  --secondary-foreground: #16242c;
+  --muted: #e9edec;
+  --muted-foreground: #56656d;
+  --faint: #8a979d;
+  /* shadcn's "accent" is the hover/focus fill of menu items, not our amber. */
+  --accent: #e9edec;
+  --accent-foreground: #16242c;
+  --signal: #eba417;
+  --destructive: #c4312a;
+  --destructive-soft: #fbe9e7;
+  --success: #1e8757;
+  --success-soft: #e1f2e9;
+  --warning: #946200;
+  --warning-soft: #fcf1d9;
+  --border: #d3dadb;
+  --input: #d3dadb;
+  --ring: #eba417;
+  --radius: 0.625rem;
+}
+
+/* Dark: follows the system setting. Steel surfaces, light text; primary actions flip to light so they stay the
+   strongest thing on the page. Tailwind's dark: variant uses the same media query. */
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --background: #10181d;
+    --foreground: #e3e9eb;
+    --card: #172228;
+    --card-foreground: #e3e9eb;
+    --popover: #172228;
+    --popover-foreground: #e3e9eb;
+    --primary: #e3e9eb;
+    --primary-foreground: #10181d;
+    --primary-hover: #cfd8db;
+    --primary-soft: #24333b;
+    --secondary: #1d2a31;
+    --secondary-foreground: #e3e9eb;
+    --muted: #1d2a31;
+    --muted-foreground: #9aa8ae;
+    --faint: #6f7e85;
+    --accent: #1d2a31;
+    --accent-foreground: #e3e9eb;
+    --signal: #f0b12e;
+    --destructive: #e5605a;
+    --destructive-soft: #3a1d1b;
+    --success: #44c08a;
+    --success-soft: #173226;
+    --warning: #f0b12e;
+    --warning-soft: #3a2f17;
+    --border: #28363d;
+    --input: #28363d;
+    --ring: #f0b12e;
+  }
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary-hover: var(--primary-hover);
+  --color-primary-soft: var(--primary-soft);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-faint: var(--faint);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-signal: var(--signal);
+  --color-destructive: var(--destructive);
+  --color-destructive-soft: var(--destructive-soft);
+  --color-success: var(--success);
+  --color-success-soft: var(--success-soft);
+  --color-warning: var(--warning);
+  --color-warning-soft: var(--warning-soft);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --font-sans: var(--font-sans-loaded), ui-sans-serif, system-ui, sans-serif;
+  --font-heading: var(--font-sans);
+  --font-mono: var(--font-mono-loaded), ui-monospace, "SFMono-Regular", monospace;
+  --shadow-popover: 0 8px 24px rgb(22 36 44 / 0.14);
+}
